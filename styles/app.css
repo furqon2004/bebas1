@@ -1,0 +1,74 @@
+@import url('../assets/fonts/fonts.css');
+
+:root {
+  /* FONTS */
+  --primary-font: "Poppins", sans-serif;
+
+  /* CONTAINER */
+  --container-lg: 1080px;
+
+  /* LARGE */
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 40px;
+  --text-5xl: 64px;
+  --text-6xl: 80px;
+
+  /* REGULAR */
+  --text-xl: 24px;
+  --text-lg: 20px;
+  --text-base: 16px;
+
+  /* COLOR */
+  --white: #fff;
+  --black: #000;
+  --dark-gray: #6f6f6f;
+  --orange: #f8a401;
+}
+
+*,html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var( --primary-font);
+    scroll-behavior: smooth;
+    
+}
+.container {
+    max-width: var(--container-lg);
+    margin: 0 auto;
+}
+.nav-wrapper{
+    display: flex; /*  mengatur tampilan agar menjadi flex*/
+    align-items: center; /*  mengatur posisi item sejajar*/
+    justify-content: space-between; /*  mengatur posisi item sejajar dan rata kanan */
+   
+}
+.hero-title{
+    font-size: var(--text-3xl); /* mengatur ukuran font*/
+    font-weight: 70; /* mengatur ketebalan font */
+    text-transform: uppercase; /* mengatur agar font kapital semua */
+    color: var(--black); /* mengatur warna font */
+}
+.nav-menu a {
+    margin: 0 30;
+    font-size: var(--text-lg);
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+    
+}
+.nav-wrapper .nav-menu{
+    display: flex;
+    gap: 40px;
+}
+.cta-button {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 16px 40px;
+    border: 1px solid var(--black);
+    border-radius: 12px;
+}

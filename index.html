@@ -1,28 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/app.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRAFT | Ngobar Week 2</title>
+
+    <link rel="stylesheet" href="./styles/app.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
     <header class="container">
-        <nav class="nav-wrapper">
-            <div>
-                <h3 class="hero-title">Craft</h3>
-            </div>
-            <div class="nav-menu">
-                <a href="">work</a>
-                <a href="">about</a>
-                <a href="">service</a>
-                <a href="">contact</a>
-            </div>
-            <div>
-                <a href="" class="cta-button">hire me</a>
-            </div>
-        </nav>
+      <nav class="navigation__wrapper">
+        <div class="navigation__title">
+          <h3>Craft</h3>
+        </div>
+        <div class="navigation__menus">
+          <a href="/#" class="navigation__link">Work</a>
+          <a href="/#" class="navigation__link">About</a>
+          <a href="/#" class="navigation__link">Service</a>
+          <a href="/#" class="navigation__link">Contact</a>
+        </div>
+        <div class="navigation__action">
+          <a href="/#" class="navigation__button">Hire Me</a>
+          <button type="button" class="navigation__toggler">
+            <svg
+              width="22"
+              height="13"
+              viewBox="0 0 22 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2H20M2 11H20"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
     </header>
-    
-</body>
+    <!-- HEADER -->
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <article class="content__article">
+        <h1 class="content__hero__title">
+          Crafting digital products, <span>Brands & Experience</span>
+        </h1>
+      </article>
+
+      <div class="content__banner">
+        <img
+          src="./assets/images/hero-banner.webp"
+          alt="craft-banner"
+          loading="lazy"
+        />
+      </div>
+
+      <section class="content__information">
+        <div class="content__item__value">
+          <div>
+            <h3>420</h3>
+            <p>Project complete</p>
+          </div>
+          <div>
+            <h3>10+</h3>
+            <p>Year of experience</p>
+          </div>
+        </div>
+        <div class="content__item__information">
+          <p>
+            Stay Informed, Stay Ahead: Unveiling the Future of Technology,
+            Gadgets, and Innovation.
+          </p>
+
+          <div class="content__item__side">
+            <div class="content__avatar">
+              <img
+                class="content__item__avatar"
+                src="./assets/images/avatar-icon.webp"
+                alt="avatar"
+                loading="lazy"
+              />
+
+              <img
+                class="content__item__avatar"
+                src="./assets/images/avatar-icon.webp"
+                alt="avatar"
+                loading="lazy"
+              />
+
+              <img
+                class="content__item__avatar"
+                src="./assets/images/avatar-icon.webp"
+                alt="avatar"
+                loading="lazy"
+              />
+            </div>
+            <button class="content__item__button">Watch Our Videos</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- MAIN CONTENT -->
+
+    <!-- SCRIPT -->
+    <script src="./scripts/app.js"></script>
+  </body>
 </html>

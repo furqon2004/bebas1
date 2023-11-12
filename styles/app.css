@@ -1,4 +1,4 @@
-@import url('../assets/fonts/fonts.css');
+@import url("../assets/fonts/fonts.css");
 
 :root {
   /* FONTS */
@@ -23,52 +23,267 @@
   --white: #fff;
   --black: #000;
   --dark-gray: #6f6f6f;
-  --orange: #f8a401;
+  --orange: #f8a401;
 }
 
-*,html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: var( --primary-font);
-    scroll-behavior: smooth;
-    
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
 }
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* UTILITY */
 .container {
-    max-width: var(--container-lg);
-    margin: 0 auto;
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.nav-wrapper{
-    display: flex; /*  mengatur tampilan agar menjadi flex*/
-    align-items: center; /*  mengatur posisi item sejajar*/
-    justify-content: space-between; /*  mengatur posisi item sejajar dan rata kanan */
-   
+
+/* HEADER */
+.navigation__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
 }
-.hero-title{
-    font-size: var(--text-3xl); /* mengatur ukuran font*/
-    font-weight: 70; /* mengatur ketebalan font */
-    text-transform: uppercase; /* mengatur agar font kapital semua */
-    color: var(--black); /* mengatur warna font */
+
+.navigation__title > h3 {
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: var(--text-xl);
+  text-transform: uppercase; /* Merubah teks menjadi huruf besar semua */
 }
-.nav-menu a {
-    margin: 0 30;
-    font-size: var(--text-lg);
-    font-weight: 500;
-    color: var(--black);
-    text-decoration: none;
-    
+
+.navigation__menus {
+  /* Membuat menu hilang ketika layar mobile */
+  display: none;
 }
-.nav-wrapper .nav-menu{
+
+.navigation__menus > a {
+  margin: 0 20px;
+  font-weight: 400;
+  font-size: var(--text-lg);
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menambahkan efek hover */
+.navigation__menus > a:hover {
+  color: var(--dark-gray);
+}
+
+.navigation__action a.navigation__button {
+  padding: 14px 40px;
+  font-size: var(--text-base);
+  border-radius: 12px;
+  font-weight: 500;
+  border: 2px solid var(--black);
+  display: none;
+}
+
+/* HEADER */
+
+/* MAIN CONTENT */
+
+.content__article {
+  padding-top: 20px;
+}
+
+.content__article > h1 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.content__hero__title > span {
+  color: var(--dark-gray);
+}
+
+.content__banner {
+  display: relative;
+  height: 280px;
+  min-width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.content__banner > img {
+  object-fit: cover;
+  border-radius: 14px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.content__banner > img:hover {
+  transform: scale(1.05);
+}
+
+.content__information {
+  display: flex;
+  padding: 20px 0;
+  margin-top: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__item__value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__item__value h3 {
+  font-size: var(--text-4xl);
+  color: var(--black);
+  font-weight: 600;
+}
+
+.content__item__value p {
+  font-size: var(--text-base);
+  color: var(--black);
+  font-weight: 400;
+}
+
+.content__item__information {
+  flex: 1;
+  display: block;
+}
+
+.content__item__information > p {
+  font-size: var(--text-base);
+  font-weight: 400;
+}
+
+.content__item__side {
+  display: flex;
+  margin-top: 14px;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid var(--dark-gray); */
+}
+
+.content__item__button {
+  background: var(--orange);
+  padding: 12px 30px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: var(--text-base);
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+
+.content__item__button:hover {
+  opacity: 0.8;
+}
+
+.content__avatar {
+  gap: 8px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.content__item__avatar {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border: 2.5px solid var(--black);
+  border-radius: 50%;
+}
+
+.content__item__avatar:nth-child(2) {
+  position: absolute;
+  transform: translateX(50%);
+  z-index: 5;
+}
+
+/* MAIN CONTENT */
+
+/* Mengatur perubahan ketika ukuran layarnya mulai dari 768px.
+  Biasanya itu ukuran tablet
+*/
+
+@media screen and (min-width: 768px) {
+  /* Ketika di layar tablet atau laptop maka buat padding jadi 0 */
+  /* UTILITY */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* HEADER */
+  .navigation__title > h3 {
+    font-size: var(--text-3xl);
+  }
+
+  .navigation__menus {
     display: flex;
+    justify-content: center;
+  }
+
+  .navigation__toggler {
+    display: none;
+  }
+
+  .navigation__action a.navigation__button {
+    display: block;
+  }
+
+  /* MAIN CONTENT */
+  .content__banner {
+    height: 100%;
+  }
+
+  .content__article > h1 {
+    font-size: var(--text-5xl);
+    line-height: 80px;
+  }
+
+  .content__information {
+    flex-direction: row;
+    align-items: center;
     gap: 40px;
+  }
+
+  .content__item__value h3 {
+    font-size: var(--text-5xl);
+  }
+
+  .content__item__value p {
+    font-size: var(--text-xl);
+  }
 }
-.cta-button {
-    font-size: var(--text-base);
-    font-weight: 600;
-    color: black;
-    text-decoration: none;
-    text-transform: capitalize;
-    padding: 16px 40px;
-    border: 1px solid var(--black);
-    border-radius: 12px;
+
+/* Mengatur perubahan ketika ukuran layarnya mulai dari 1024px.
+  Biasanya itu ukuran laptop
+*/
+
+@media screen and (min-width: 1024px) {
+  .content__article > h1 {
+    font-size: var(--text-6xl);
+    letter-spacing: -2px;
+    line-height: 100px;
+  }
 }
